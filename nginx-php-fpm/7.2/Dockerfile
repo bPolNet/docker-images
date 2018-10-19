@@ -9,6 +9,8 @@ RUN apt-get install -y supervisor
 
 ADD etc /etc/
 
+RUN echo "memory_limit = 256M" >> /usr/local/etc/php/conf.d/memory_limit.ini
+
 RUN rm /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
