@@ -11,6 +11,9 @@ ADD etc /etc/
 
 RUN echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/memory_limit.ini
 
+# let php-fpm access env variables
+RUN sed -i 's/;clear_env = no/clear_env = no/g' /usr/local/etc/php-fpm.d/www.conf
+
 RUN rm /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
