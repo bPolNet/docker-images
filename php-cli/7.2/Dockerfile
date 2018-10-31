@@ -41,6 +41,13 @@ WORKDIR /var/www
 
 RUN usermod -u 1000 -s /bin/bash www-data
 
+# GD extension
+RUN apt-get install -y libpng-dev \
+    && docker-php-ext-install gd
+
+# EXIF extension
+RUN docker-php-ext-install exif
+
 USER www-data
 
 ENTRYPOINT ["/usr/bin/tini", "--", "php"]

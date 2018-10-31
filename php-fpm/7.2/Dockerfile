@@ -29,6 +29,13 @@ RUN pecl install xdebug \
     #&& echo "xdebug.remote_host = 127.0.0.1" >> /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/xdebug.ini
 
+# GD extension
+RUN apt-get install -y libpng-dev \
+    && docker-php-ext-install gd
+
+# EXIF extension
+RUN docker-php-ext-install exif
+
 WORKDIR /var/www
 
 RUN usermod -u 1000 -s /bin/bash www-data
