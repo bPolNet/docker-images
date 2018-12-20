@@ -1,1 +1,1 @@
-Inspired by https://github.com/richarvey/nginx-php-fpm/
+Version with xdebug installed
