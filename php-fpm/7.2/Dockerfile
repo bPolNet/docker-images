@@ -25,6 +25,9 @@ RUN apt-get install -y libpng-dev \
 # EXIF extension
 RUN docker-php-ext-install exif
 
+# make production version
+RUN mv /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+
 WORKDIR /var/www
 
 RUN usermod -u 1000 -s /bin/bash www-data

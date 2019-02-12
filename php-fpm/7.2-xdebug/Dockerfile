@@ -4,6 +4,9 @@ MAINTAINER Konrad Podgórski <konrad.podgorski@gmail.com>
 
 USER root
 
+# make development version
+RUN mv /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
+
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && echo "xdebug.idekey = PHPSTORM" >> /usr/local/etc/php/conf.d/xdebug.ini \
