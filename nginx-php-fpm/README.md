@@ -1,1 +1,0 @@
-Version with xdebug installed

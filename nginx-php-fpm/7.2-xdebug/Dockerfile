@@ -10,6 +10,7 @@ RUN apt-get install -y supervisor
 ADD etc /etc/
 
 RUN echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/memory_limit.ini
+ADD etc/php/conf.d /usr/local/etc/php/conf.d/
 
 # let php-fpm access env variables
 RUN sed -i 's/;clear_env = no/clear_env = no/g' /usr/local/etc/php-fpm.d/www.conf
