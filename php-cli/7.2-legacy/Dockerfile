@@ -1,4 +1,4 @@
-FROM bpol/nginx-php-fpm:7.2-xdebug
+FROM bpol/nginx-php-fpm:7.2-legacy-xdebug
 
 MAINTAINER Konrad Podgórski <konrad.podgorski@gmail.com>
 
