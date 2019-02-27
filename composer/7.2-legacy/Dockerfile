@@ -1,5 +1,5 @@
 FROM composer:latest as composer
-FROM bpol/nginx-php-fpm:7.2
+FROM bpol/nginx-php-fpm:7.2-legacy
 
 MAINTAINER Konrad Podgórski <konrad.podgorski@gmail.com>
 
