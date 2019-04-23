@@ -19,3 +19,5 @@ RUN pecl install xdebug \
     && echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/xdebug.ini
 
 USER www-data
+
+EXPOSE 9001
