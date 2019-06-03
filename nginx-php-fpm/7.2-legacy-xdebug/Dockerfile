@@ -17,3 +17,6 @@ RUN apt-get install libicu-dev -y \
 # php7.2 SOAP
 RUN apt-get install libxml2 libxml2-dev -y \
     && docker-php-ext-install soap
+
+# PDF generation
+RUN apt-get install libxrender1 -y
