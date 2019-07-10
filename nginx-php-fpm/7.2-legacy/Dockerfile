@@ -20,3 +20,6 @@ RUN apt-get install libxml2 libxml2-dev -y \
 
 # PDF generation
 RUN apt-get install libxrender1 -y
+
+# text editors
+RUN apt-get install vim nano -y
