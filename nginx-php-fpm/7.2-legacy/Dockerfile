@@ -23,3 +23,6 @@ RUN apt-get install libxrender1 -y
 
 # text editors
 RUN apt-get install vim nano -y
+
+# needed by cloud print
+RUN apt-get install procps -y
